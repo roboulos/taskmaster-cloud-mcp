@@ -44,4 +44,6 @@ mcp-config.json
 oauth-tokens.json
 
 # Keep TypeScript source
-!src/**/*.ts 
+!src/**/*.ts
+# Keep worker.js specifically
+!src/worker.js 
