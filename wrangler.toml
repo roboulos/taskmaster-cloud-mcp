@@ -1,0 +1,21 @@
+name = "taskmaster-cloud-mcp"
+main = "src/worker.js"
+compatibility_date = "2024-05-27"
+account_id = "7eb97d8aafdc135db8eb1c18613dc170"
+
+[env.production]
+name = "taskmaster-cloud-mcp-prod"
+
+# Environment variables will be set via wrangler secret
+# XANO_INSTANCE_ID
+# XANO_WORKSPACE_ID
+# XANO_API_KEY
+# OAUTH_CLIENT_ID
+# OAUTH_CLIENT_SECRET
+
+# Allow CORS for MCP clients
+[env.production.cors]
+allowed_origins = ["*"]
+allowed_methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+allowed_headers = ["Content-Type", "Authorization"]
+max_age = 86400

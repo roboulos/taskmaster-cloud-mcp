@@ -1,0 +1,21 @@
+{
+  "name": "taskmaster-cloud-mcp",
+  "version": "1.0.0",
+  "description": "A cloud-based task management system built on Xano, extending the TaskMaster MCP to provide persistent, real-time task tracking across projects.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^4.17.0"
+  }
+}
