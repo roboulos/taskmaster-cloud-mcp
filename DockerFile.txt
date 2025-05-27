@@ -1,0 +1,19 @@
+# Use Python 3.11 as the base image
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the server code
+COPY xano_mcp_server.py .
+
+# Expose the port the server runs on
+EXPOSE 3000
+
+# Command to run the server
+# The token will be provided as an environment variable
+ENTRYPOINT ["python", "xano_mcp_server.py", "--token", "${XANO_API_TOKEN}", "--port", "3000"]
